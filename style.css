@@ -1,0 +1,83 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000; /* Black background */
+}
+
+.calendar {
+    width: 320px;
+    background: #1a1a1a; /* Darker shade of black */
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    border: 2px solid #ff69b4; /* Hot Pink */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.calendar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 105, 180, 0.5); /* Pink shadow */
+}
+
+.month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    color: #ff69b4;
+}
+
+.month h2 {
+    margin: 0;
+    font-size: 1.6em;
+    text-transform: uppercase;
+}
+
+.weekdays, .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.weekdays div {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #ff69b4;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 6px;
+}
+
+.days .day {
+    text-align: center;
+    padding: 14px;
+    margin-bottom: 6px;
+    border-radius: 50%;
+    background-color: #333333; /* Dark grey for day background */
+    color: #ff69b4;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.days .day:hover {
+    background-color: #ff69b4;
+    color: #1a1a1a; /* Darker background on hover */
+    transform: scale(1.1);
+}
+
+.prev, .next {
+    cursor: pointer;
+    font-size: 24px;
+    color: #ff69b4;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.prev:hover, .next:hover {
+    color: #ff1493; /* Deep pink on hover */
+    transform: scale(1.2);
+}
